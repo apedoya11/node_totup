@@ -1,13 +1,24 @@
 {
-  "name": "truemoney-api",
+  "name": "node_totup",
   "version": "1.0.0",
-  "description": "A simple Node.js project",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apedoya11/node_totup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apedoya11/node_totup/issues"
+  },
+  "homepage": "https://github.com/apedoya11/node_totup#readme",
+  "description": "",
   "dependencies": {
-    "express": "^4.17.1",
-    "puppeteer": "^19.0.0"
+    "express": "^5.1.0",
+    "puppeteer": "^24.8.1"
   }
 }
