@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^5.1.0",
+    "node-fetch": "^2.7.0",
+    "puppeteer": "^24.8.0"
+  }
+}
