@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "puppeteer install"  // ทำให้ Puppeteer ติดตั้ง Chromium
+    "postinstall": "puppeteer install"
   },
   "repository": {
     "type": "git",
