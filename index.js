@@ -48,20 +48,14 @@ app.get('/:voucherHash', async (req, res) => {
     let result;
 
     if (jsonData.status.code !== "SUCCESS") {
-      result = {
-        success: false,
-        message: "ซองไม่ถูกต้อง"
-      };
+      result = "ERROR1";
     } else if (jsonData.data.voucher.member !== 1) {
-      result = {
-        success: false,
-        message: "ผู้รับซองต้องเป็น 1 คน"
-      };
+
+      result = "ERROR2";
+
     } else {
-      result = {
-        success: true,
-        amount_baht: jsonData.data.voucher.amount_baht
-      };
+      result = amount_baht;
+
     }
 
     // ส่งผลลัพธ์กลับเป็น JSON
