@@ -2,10 +2,10 @@
   "name": "node_totup",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "postinstall": "puppeteer install"
-  },
+"scripts": {
+  "start": "node index.js",
+  "postinstall": "npx puppeteer browsers install chrome"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apedoya11/node_totup.git"
