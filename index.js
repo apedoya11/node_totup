@@ -54,6 +54,7 @@ app.get('/:voucherHash', async (req, res) => {
       result = "ERROR2";
 
     } else {
+      let amountBaht = parseFloat(jsonData.data.voucher.amount_baht); 
       result = amount_baht;
 
     }
