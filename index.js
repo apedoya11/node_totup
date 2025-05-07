@@ -26,7 +26,8 @@ app.get('/:voucherHash', async (req, res) => {
     const browser = await puppeteer.launch({
       headless: true, // เปลี่ยนเป็น true หากต้องการแบบไม่มีหน้าต่าง
       slowMo: 50,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      executablePath: puppeteer.executablePath(), // เพิ่มบรรทัดนี้
+      args: ['--no-sandbox', '--disable-setuid-sandbox'] // Render ต้องการ args เหล่านี้
     });
 
     const page = await browser.newPage();
