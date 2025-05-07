@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "install": "npx puppeteer install chrome",
     "start": "node index.js"
   },
   "repository": {
@@ -19,6 +20,6 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
-    "puppeteer": "^20.9.0"
+    "puppeteer": "^24.8.1"
   }
 }
