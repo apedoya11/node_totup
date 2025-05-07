@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: puppeteer-app
-    runtime: node
-    buildCommand: |
-      npm install
-      npx puppeteer browsers install chrome
-    startCommand: node index.js

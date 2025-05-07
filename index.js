@@ -2,7 +2,7 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 
 const app = express();
-const port = process.env.PORT || 3000;  // ใช้ port จาก environment หรือ 3000 ถ้าไม่ได้กำหนด
+const port = 3000;
 
 // เพิ่ม route สำหรับหน้าแรก '/'
 app.get('/', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/:voucherHash', async (req, res) => {
     const browser = await puppeteer.launch({
       headless: true, // เปลี่ยนเป็น true หากต้องการแบบไม่มีหน้าต่าง
       slowMo: 50,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'] // Render ต้องการ args เหล่านี้
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     const page = await browser.newPage();
@@ -50,10 +50,13 @@ app.get('/:voucherHash', async (req, res) => {
     if (jsonData.status.code !== "SUCCESS") {
       result = "ERROR1";
     } else if (jsonData.data.voucher.member !== 1) {
+
       result = "ERROR2";
+
     } else {
       let amountBaht = parseFloat(jsonData.data.voucher.amount_baht); 
-      result = amountBaht;  // แก้ไขเป็น `amountBaht` แทน `amount_baht`
+      result = amount_baht;
+
     }
 
     // ส่งผลลัพธ์กลับเป็น JSON
@@ -66,7 +69,7 @@ app.get('/:voucherHash', async (req, res) => {
   }
 });
 
-// เริ่มเซิร์ฟเวอร์ที่ port ที่กำหนดจาก environment หรือ 3000
+// เริ่มเซิร์ฟเวอร์ที่ port 3000
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
